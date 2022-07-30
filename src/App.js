@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
+import Navbar from "./component/Navbar";
 import HomePage from "./component/Pages/HomePage";
 import { GlobalStyles } from "./GlobalStyles";
 
@@ -12,14 +13,14 @@ const theme = {
     aquamarine: "#86f3df",
     black: "#000",
     black1: "#070b0d",
-    black2: "#151a1e",
     blackOpacity: "rgb(0, 0, 0, 0.8)",
+    black2: "#151a1e",
+    gray: "#2e2d2c",
+    darkgray: "#b3afac",
     white: "#fff",
-    lavender: "#e8ebed",
+    white1: "#e8ebed",
     whitesmoke: "  #f8f8f6",
     gainsboro: "#e1e4e6",
-    // gainsboro: "#1e9bff",
-    darkgray: "#b3afac",
     midnightblue: "#18043c",
     midnightblue1: "#071733",
     transparent: "transparent",
@@ -39,6 +40,7 @@ function App() {
     <Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <Navbar />
         <HomePage />
       </ThemeProvider>
     </Fragment>

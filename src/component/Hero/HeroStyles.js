@@ -5,6 +5,7 @@ import { VscArrowSmallDown } from "react-icons/vsc";
 import { Heading, MainHeading, paragraph, Section } from "../../GlobalStyles";
 import bg from "../../image/bg.jpg";
 
+const white1 = ({ theme }) => theme.color.white1;
 const orange = ({ theme }) => theme.color.orange;
 const blackOpacity = ({ theme }) => theme.color.blackOpacity;
 
@@ -37,7 +38,8 @@ export const Container = styled.div`
 `;
 
 export const HeroContent = styled.div`
-  @media screen and (max-width: 960px) {
+  color: ${white1};
+  @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
     margin: auto;
     vertical-align: middle;
   }
@@ -79,7 +81,7 @@ export const TypewriterText = styled.span`
       display: block;
     }
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
     justify-content: center;
   }
 `;
