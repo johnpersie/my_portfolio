@@ -22,9 +22,9 @@ a{
 }
 
 body {
-background:${({ theme }) => theme.color.bgBlack};
+background:${({ theme }) => theme.color.black1};
   font-family: 'Poppins', sans-serif;
-  color: ${({ theme }) => theme.color.lavender};
+  color: ${({ theme }) => theme.color.white1};
   font-size: 1.6rem;
 }
 
@@ -60,16 +60,16 @@ export const TextWrapper = styled.span`
   text-align: ${({ align }) => align || "center"};
 `;
 export const Row = styled.div`
-  display: ${({ display }) => (display ? "flex" : "grid")};
-  align-items: ${({ align }) => (align ? align : "")};
+  display: ${({ display }) => display || "flex"};
+  align-items: ${({ align }) => align || ""};
   padding: ${({ padding }) => padding || ""};
-  text-align: ${({ textAlign }) => (textAlign ? textAlign : "")};
+  text-align: ${({ textAlign }) => textAlign || ""};
 `;
 
 export const Column = styled.div`
   width: ${({ width }) => width || ""};
   align-items: ${({ align }) => align || ""};
-  text-align: ${({ textAlign }) => (textAlign ? textAlign : "")};
+  text-align: ${({ textAlign }) => textAlign || ""};
 `;
 
 export const Button = styled.div`

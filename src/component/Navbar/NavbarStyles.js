@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const white1 = ({ theme }) => theme.color.white1;
-const black2 = ({ theme }) => theme.color.black2;
+const black1 = ({ theme }) => theme.color.black1;
 const orange = ({ theme }) => theme.color.orange;
 const gray = ({ theme }) => theme.color.gray;
 const blackOpacity = ({ theme }) => theme.color.blackOpacity;
@@ -16,11 +16,11 @@ export const Nav = styled.nav`
   z-index: 10;
   display: flex;
   align-content: center;
-  background: ${black2};
+  background: ${black1};
   transition: 0.5s ease-in;
   box-shadow: 0 2px 1rem ${gray};
 
-  ${({ navbar }) => navbar} {
+  ${({ navColor }) => navColor} {
     background: transparent;
     height: 8rem;
     box-shadow: none;
@@ -221,14 +221,14 @@ export const BtnLink = styled.a`
   color: ${white1};
   padding: 1.2rem 1.5rem;
   border-radius: 0.5rem;
-  border: 2px solid #ffc75f;
+  border: 2px solid ${orange};
   outline: none;
   text-align: center;
 
   &:hover {
     transition: all 0.3s ease-out;
     color: black;
-    background-color: #ffc75f;
+    background-color: ${orange};
   }
 
   @media screen and (max-width: 960px) {
