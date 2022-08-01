@@ -19,7 +19,7 @@ import {
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection id="hero">
       <Container>
         <HeroContent>
           <HeroSubHeading>
