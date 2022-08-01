@@ -1,13 +1,24 @@
 import styled from "styled-components";
-import { MainHeading } from "../../GlobalStyles";
+import { MainHeading, Section } from "../../GlobalStyles";
 
 const black2 = ({ theme }) => theme.color.black2;
 const black1 = ({ theme }) => theme.color.black1;
+const blackOpacity1 = ({ theme }) => theme.color.blackOpacity1;
 const darkgray = ({ theme }) => theme.color.darkgray;
 const orange = ({ theme }) => theme.color.orange;
 const gray = ({ theme }) => theme.color.gray;
 const white = ({ theme }) => theme.color.white;
 
+export const ContactSection = styled(Section)`
+  background-image: url(${require("../../image/frontend.jpg")});
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 100rem ${blackOpacity1};
+  background-size: cover;
+  background-attachment: fixed;
+`;
 export const ContainerWrapper = styled.div`
   max-width: 120rem;
   width: 90%;
@@ -15,7 +26,7 @@ export const ContainerWrapper = styled.div`
 `;
 export const TextWrapper = styled.div`
   text-align: center;
-  padding: 6rem 1rem;
+  padding: 2rem 0 0;
 
   h4 {
     font-size: clamp(1.6rem, 5vw, 2rem);
@@ -44,6 +55,9 @@ export const FormContainer = styled.div`
   margin: auto;
   width: 50%;
   align-content: center;
+  background: ${black2};
+  padding: 3rem 3rem;
+  border-radius: 2rem;
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -63,7 +77,7 @@ export const FormContainer = styled.div`
         position: relative;
 
         input {
-          border: 2px solid ${gray};
+          border: 2px solid ${black1};
           font-family: inherit;
           font-size: 1.8rem;
           padding: 1.6rem 1.8rem;
@@ -71,7 +85,7 @@ export const FormContainer = styled.div`
           outline: none;
           color: #fff;
           width: 100%;
-          background: transparent;
+          background: ${black1};
 
           :hover {
             border-color: ${darkgray};
@@ -79,7 +93,7 @@ export const FormContainer = styled.div`
           }
 
           &::-webkit-input-placeholder {
-            color: #999;
+            color: ${darkgray};
             background: transparent;
           }
           input:placeholder-shown {
@@ -89,7 +103,7 @@ export const FormContainer = styled.div`
       }
       input:focus ~ label,
       input:valid + label {
-        color: #fff;
+        color: ${white};
         top: -1rem;
         font-size: 1.3rem;
         left: 0.8rem;
@@ -100,16 +114,16 @@ export const FormContainer = styled.div`
 
       textarea {
         width: 100%;
-        color: #fff;
+        color: ${white};
         resize: none;
         border-radius: 5px;
-        border: 2px solid ${gray};
+        border: 2px solid ${black1};
         outline: none;
         height: 30rem;
         padding: 2rem;
         font-size: 1.8rem;
         font-weight: 300;
-        background: transparent;
+        background: ${black1};
         margin-bottom: 1.5rem;
         position: relative;
 
@@ -133,7 +147,7 @@ export const FormContainer = styled.div`
 
       textarea:focus ~ label,
       textarea:valid + label {
-        color: #fff;
+        color: ${white};
         top: -1rem;
         font-size: 1.3rem;
         left: 1rem;
@@ -141,9 +155,9 @@ export const FormContainer = styled.div`
     }
     button {
       font-size: 1.8rem;
-      border: 2px solid ${gray};
+      border: 2px solid ${black1};
       padding: ${({ padding }) => padding || "1rem 3rem"};
-      background: transparent;
+      background: ${black1};
       font-weight: 500;
       color: ${darkgray};
       border-radius: 5px;
@@ -151,9 +165,9 @@ export const FormContainer = styled.div`
       transition: 0.3s ease-in;
 
       :hover {
-        border: 2px solid #ffc75f;
-        background-color: #ffc75f;
-        color: #000;
+        border: 2px solid ${orange};
+        background-color: ${orange};
+        color: ${black1};
         transition: 0.2s ease-in;
       }
     }
@@ -162,7 +176,7 @@ export const FormContainer = styled.div`
 
 export const TextBox = styled.textarea`
   width: 100%;
-  color: #fff;
+  color: ${white};
   resize: none;
   border-radius: 5px;
   border: 2px solid ${gray};

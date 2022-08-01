@@ -14,6 +14,7 @@ const theme = {
     black: "#000",
     black1: "#070b0d",
     blackOpacity: "rgb(0, 0, 0, 0.8)",
+    blackOpacity1: "rgb(0, 0, 0, 0.95)",
     black2: "#151a1e",
     gray: "#2e2d2c",
     darkgray: "#b3afac",
