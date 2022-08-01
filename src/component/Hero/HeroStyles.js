@@ -22,7 +22,7 @@ export const HeroSection = styled(Section)`
 
 export const Container = styled.div`
   max-width: 120rem;
-  width: 100%;
+  width: 90%;
   height: 100%;
   margin: 0 auto;
   padding: 2rem;
@@ -32,17 +32,13 @@ export const Container = styled.div`
 
   @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
     margin: 0 auto;
-    text-align: center;
-    padding: 1rem;
+    text-align: start;
+    padding: 0;
   }
 `;
 
 export const HeroContent = styled.div`
   color: ${white1};
-  @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
-    margin: auto;
-    vertical-align: middle;
-  }
 `;
 export const HeroSubHeading = styled(Heading)`
   font-size: clamp(1.3rem, 5vw, 2rem);
@@ -81,23 +77,17 @@ export const TypewriterText = styled.span`
       display: block;
     }
   }
-  @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
-    justify-content: center;
-  }
 `;
 export const Row = styled.div`
   margin: 0 auto;
   margin-top: 4rem;
 
   @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  @media screen and (max-width: ${({ theme }) => theme.screens.md}) {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+    a {
+      :first-child {
+        margin-right: 2rem;
+      }
+    }
   }
 `;
 

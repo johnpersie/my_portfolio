@@ -25,7 +25,7 @@ export const Heading = styled(MainHeading)`
     content: "";
     height: 0.5rem;
     width: 10%;
-    background-color: rgb(199, 152, 52);
+    background-color: ${orange};
     opacity: 0.8;
     position: absolute;
     bottom: 0px;
@@ -177,7 +177,7 @@ export const TextWrapper = styled.div`
     padding: 0.5rem 1.2rem;
     border-radius: 0.7rem;
     background: ${gray};
-    margin-bottom: 0.7rem;
+    margin-bottom: 1rem;
     font-weight: 300;
   }
 `;

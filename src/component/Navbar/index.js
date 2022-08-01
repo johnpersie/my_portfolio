@@ -31,7 +31,7 @@ const Navbar = () => {
         <NavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
           <span>&nbsp;</span>
         </NavToggle>
-        <NavLogo to="home">
+        <NavLogo href="#home">
           <Img src={logo} alt="JohnAhachi" />
           John&nbsp;<span>Ahachi</span>
         </NavLogo>

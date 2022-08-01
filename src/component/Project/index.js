@@ -28,7 +28,7 @@ const Project = () => {
     <Section id="project">
       <Container>
         <ProjectWrapper>
-          <Heading>Portfolio</Heading>
+          <Heading>Projects</Heading>
           <SubHeading>Some Things I’ve Built</SubHeading>
           {data.map((items) => (
             <Row key={items.id} fd={items.id % 2 === 0 && "row-reverse"}>

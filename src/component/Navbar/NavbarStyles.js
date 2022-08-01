@@ -29,7 +29,7 @@ export const Nav = styled.nav`
 `;
 export const NavContainer = styled.div`
   max-width: 120rem;
-  width: 100%;
+  width: 90%;
   margin: 0 auto;
   align-items: center;
   display: flex;
@@ -154,7 +154,7 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavItem = styled.li`
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 
   @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
     padding: 2rem 2rem;
