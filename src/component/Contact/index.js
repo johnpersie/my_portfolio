@@ -8,6 +8,7 @@ import {
 } from "./ContactStyles";
 import emailjs from "@emailjs/browser";
 import Alert from "../alert";
+import CardLink from "./CardLink";
 
 const Contact = () => {
   const [alert, setAlert] = useState(null);
@@ -101,6 +102,7 @@ const Contact = () => {
             <Alert alert={alert} />
           </FormContainer>
         </ContainerWrapper>
+        <CardLink />
       </Container>
     </ContactSection>
   );

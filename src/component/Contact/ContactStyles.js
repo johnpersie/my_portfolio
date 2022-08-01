@@ -15,7 +15,7 @@ export const ContactSection = styled(Section)`
   width: 100vw;
   background-position: center;
   background-attachment: fixed;
-  box-shadow: inset 0 85rem 0 0 ${blackOpacity1};
+  box-shadow: inset 0 100em 0 0 ${blackOpacity1};
   background-size: cover;
   background-attachment: fixed;
 `;
