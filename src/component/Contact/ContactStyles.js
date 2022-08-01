@@ -12,10 +12,10 @@ const white = ({ theme }) => theme.color.white;
 export const ContactSection = styled(Section)`
   background-image: url(${require("../../image/frontend.jpg")});
   height: 100%;
-  width: 100%;
+  width: 100vw;
   background-position: center;
   background-attachment: fixed;
-  box-shadow: inset 0 0 0 100rem ${blackOpacity1};
+  box-shadow: inset 0 85rem 0 0 ${blackOpacity1};
   background-size: cover;
   background-attachment: fixed;
 `;
@@ -26,7 +26,7 @@ export const ContainerWrapper = styled.div`
 `;
 export const TextWrapper = styled.div`
   text-align: center;
-  padding: 2rem 0 0;
+  padding: 4rem 0;
 
   h4 {
     font-size: clamp(1.6rem, 5vw, 2rem);

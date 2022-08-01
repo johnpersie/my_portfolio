@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { ThemeProvider } from "styled-components";
+import Footer from "./component/Footer/Footer";
 import Navbar from "./component/Navbar";
 import HomePage from "./component/Pages/HomePage";
 import { GlobalStyles } from "./GlobalStyles";
@@ -44,6 +45,7 @@ function App() {
         <GlobalStyles />
         <Navbar />
         <HomePage />
+        <Footer />
       </ThemeProvider>
     </Fragment>
   );
