@@ -148,7 +148,7 @@ export const Description = styled.div`
 export const Parag = styled.p`
   text-align: ${({ ta }) => ta || "end"};
   font-weight: 300;
-  font-size: clamp(1.3rem 5vw, 1.6rem);
+  font-size: clamp(1.4rem 5vw, 1.6rem);
 
   @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
     text-align: start;
@@ -168,7 +168,7 @@ export const TextWrapper = styled.div`
   }
 
   p {
-    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
     text-align: center;
     display: inline-flex;
     gap: 0.5rem;

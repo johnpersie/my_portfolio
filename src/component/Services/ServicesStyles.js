@@ -64,6 +64,7 @@ export const Card = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    transition: transform 1s;
   }
   h3 {
     font-weight: 600;
@@ -83,5 +84,8 @@ export const Card = styled.div`
     @media screen and (max-width: 420px) {
       transform: none;
     }
+  }
+  :hover div {
+    transform: rotate(360deg);
   }
 `;

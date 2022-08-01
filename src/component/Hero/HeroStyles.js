@@ -59,7 +59,7 @@ export const HeroHeading = styled(MainHeading)`
 export const HeroDescription = styled(paragraph)`
   font-weight: 300;
   line-height: 2;
-  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
   max-width: 60rem;
 `;
 
@@ -67,7 +67,7 @@ export const TypewriterText = styled.span`
   display: flex;
   justify-content: flex-start;
   margin-bottom: 4rem;
-  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-size: clamp(1.6rem, 3vw, 1.9rem);
   font-family: "Poppins", sans-serif;
   p {
   }

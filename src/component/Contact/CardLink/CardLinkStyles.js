@@ -75,7 +75,7 @@ export const Col = styled.a`
     width: 45%;
   }
   @media screen and (max-width: 450px) {
-    width: 46%;
+    width: 80%;
     padding: 1rem;
   }
   @media screen and (max-width: 320px) {

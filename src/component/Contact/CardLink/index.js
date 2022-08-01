@@ -3,7 +3,6 @@ import Card from "../../Data/Card";
 import {
   CardContainer,
   Col,
-  Cols,
   Content,
   Heading,
   HeadingContainer,
