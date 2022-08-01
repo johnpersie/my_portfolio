@@ -30,6 +30,7 @@ const theme = {
     xsm: "414px",
     sm: "600px",
     md: "768px",
+    mid: "820px",
     lg: "960px",
     xl: "1280px",
   },

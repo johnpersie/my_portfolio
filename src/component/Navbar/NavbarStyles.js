@@ -150,7 +150,7 @@ export const NavMenu = styled.ul`
     justify-content: flex-start;
     align-items: center;
     transition: all 0.5s ease;
-    padding-top: 15rem;
+    padding-top: 10rem;
   }
 `;
 export const NavItem = styled.li`
