@@ -1,4 +1,5 @@
 import React from "react";
+import Contact from "../Contact";
 import Hero from "../Hero";
 import Project from "../Project";
 import Service from "../Services";
@@ -9,6 +10,7 @@ const HomePage = () => {
       <Hero />
       <Service />
       <Project />
+      <Contact />
     </>
   );
 };
