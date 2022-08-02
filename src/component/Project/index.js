@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Section } from "../../GlobalStyles";
 import { data } from "../Data/ProjectData";
 import {
@@ -21,18 +20,31 @@ import {
   Parag,
   Heading,
   SubHeading,
+  HeadingWrapper,
 } from "./ProjectStyles";
-
+import { projectAnimations, slideInAnimations } from "../Motion/animation";
+import { useScroll } from "../Motion/useScroll";
 const Project = () => {
+  const [ref, controls] = useScroll();
   return (
-    <Section id="project">
+    <Section id="project" ref={ref}>
       <Container>
         <ProjectWrapper>
-          <Heading>Projects</Heading>
-          <SubHeading>Some Things I’ve Built</SubHeading>
+          <HeadingWrapper
+            variants={projectAnimations}
+            transition={{ delay: 0.3, type: "spring" }}
+            animate={controls}
+          >
+            <Heading>Projects</Heading>
+            <SubHeading>Some Things I’ve Built</SubHeading>
+          </HeadingWrapper>
           {data.map((items) => (
             <Row key={items.id} fd={items.id % 2 === 0 && "row-reverse"}>
-              <Col1>
+              <Col1
+                variants={projectAnimations}
+                transition={{ delay: 0.5, type: "tween" }}
+                animate={controls}
+              >
                 <Wrapper>
                   <a href={items.live}>
                     <Img src={items.img} alt="project-img" />
@@ -40,18 +52,32 @@ const Project = () => {
                 </Wrapper>
               </Col1>
               <Col2 ai={items.id % 2 === 0 && "flex-start"}>
-                <TitleWrapper>
+                <TitleWrapper
+                  variants={projectAnimations}
+                  transition={{ delay: 0.4, duration: 0.5, type: "spring" }}
+                  animate={controls}
+                >
                   <SubTitle>{items.team}</SubTitle>
                   <ProjectTitle>{items.title}</ProjectTitle>
                 </TitleWrapper>
-                <Description jc={items.id % 2 === 0 && "flex-start"}>
+                <Description
+                  variants={slideInAnimations}
+                  transition={{ delay: 0.6, duration: "1", type: "tween" }}
+                  jc={items.id % 2 === 0 && "flex-start"}
+                  animate={controls}
+                >
                   <div>
                     <Parag ta={items.id % 2 === 0 && "start"}>
                       {items.text} {items.text1}
                     </Parag>
                   </div>
                 </Description>
-                <TextWrapper jc={items.id % 2 === 0 && "flex-start"}>
+                <TextWrapper
+                  variants={slideInAnimations}
+                  transition={{ delay: 1.2, duration: "1", type: "tween" }}
+                  animate={controls}
+                  jc={items.id % 2 === 0 && "flex-start"}
+                >
                   <span>
                     {items.stack.map((tech, index) => (
                       <p key={index}>

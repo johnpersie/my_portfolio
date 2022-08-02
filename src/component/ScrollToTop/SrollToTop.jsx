@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { TbChevronsUp } from "react-icons/tb";
-const SrollToTop = () => {
+
+const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
   window.addEventListener("scroll", () => {
     window.pageYOffset > 100 ? setVisible(true) : setVisible(false);
@@ -24,6 +25,7 @@ const Div = styled.div`
   .none {
     opacity: 0;
     visibility: hidden;
+    transition: 0.3s ease;
   }
   a {
     position: fixed;
@@ -35,7 +37,7 @@ const Div = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s;
+    transition: 0.4s ease;
     z-index: 10;
     svg {
       color: ${black};
@@ -43,4 +45,4 @@ const Div = styled.div`
     }
   }
 `;
-export default SrollToTop;
+export default ScrollToTop;

@@ -12,6 +12,7 @@ import {
 } from "./NavbarStyles";
 import logo from "../../image/logo1.png";
 import navData from "../Data/NavData";
+import { navAnimations } from "../Motion/animation";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState(false);
@@ -37,13 +38,22 @@ const Navbar = () => {
         </NavLogo>
         <NavMenu isOpen={isOpen}>
           {navData.map(({ id, title, link }) => (
-            <NavItem key={id}>
+            <NavItem
+              key={id}
+              variants={navAnimations}
+              transition={{ delay: "0.5", type: "spring" }}
+            >
               <NavLinks href={link} onClick={handleClose}>
                 {title}
               </NavLinks>
             </NavItem>
           ))}
-          <BtnLink href="../../image/John Ahachi .pdf" download>
+          <BtnLink
+            variants={navAnimations}
+            transition={{ delay: "0.8", type: "spring" }}
+            href="../../image/John Ahachi .pdf"
+            download={"../../image/John Ahachi .pdf"}
+          >
             Resume
           </BtnLink>
         </NavMenu>

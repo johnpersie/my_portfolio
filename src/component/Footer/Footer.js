@@ -1,5 +1,4 @@
 import React from "react";
-import SrollToTop from "../ScrollToTop/SrollToTop";
 import { Container, FooterWrapper, Para, Span, TextBox } from "./footerStyles";
 
 function Footer() {
@@ -13,7 +12,6 @@ function Footer() {
             <Span>John Ahachi</Span>
           </Para>
         </TextBox>
-        <SrollToTop />
       </FooterWrapper>
     </Container>
   );

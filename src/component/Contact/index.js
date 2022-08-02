@@ -9,6 +9,7 @@ import {
 import emailjs from "@emailjs/browser";
 import Alert from "../alert";
 import CardLink from "./CardLink";
+import { ScaleInAnimations } from "../Motion/animation";
 
 const Contact = () => {
   const [alert, setAlert] = useState(null);
@@ -60,7 +61,10 @@ const Contact = () => {
               Let's get it <span>started.</span>
             </h1>
           </TextWrapper>
-          <FormContainer>
+          <FormContainer
+            variants={ScaleInAnimations}
+            transition={{ delay: 0.6, duration: "1", type: "spring" }}
+          >
             <form ref={form} onSubmit={sendEmail}>
               <div>
                 <div>

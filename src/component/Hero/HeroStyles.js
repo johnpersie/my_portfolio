@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { BsMouse } from "react-icons/bs";
 import { VscArrowSmallDown } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 import { Heading, MainHeading, paragraph, Section } from "../../GlobalStyles";
 import bg from "../../image/bg.jpg";
@@ -37,7 +38,7 @@ export const Container = styled.div`
   }
 `;
 
-export const HeroContent = styled.div`
+export const HeroContent = styled(motion.div)`
   color: ${white1};
 `;
 export const HeroSubHeading = styled(Heading)`

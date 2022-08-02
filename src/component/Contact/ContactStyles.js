@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { MainHeading, Section } from "../../GlobalStyles";
+import { motion } from "framer-motion";
 
 const black2 = ({ theme }) => theme.color.black2;
 const black1 = ({ theme }) => theme.color.black1;
@@ -51,7 +52,7 @@ export const Heading = styled(MainHeading)`
     color: red;
   }
 `;
-export const FormContainer = styled.div`
+export const FormContainer = styled(motion.div)`
   margin: auto;
   width: 50%;
   align-content: center;

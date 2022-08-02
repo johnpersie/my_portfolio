@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const white1 = ({ theme }) => theme.color.white1;
 const black1 = ({ theme }) => theme.color.black1;
@@ -153,7 +154,7 @@ export const NavMenu = styled.ul`
     padding-top: 10rem;
   }
 `;
-export const NavItem = styled.li`
+export const NavItem = styled(motion.li)`
   padding: 1rem 1.5rem;
 
   @media screen and (max-width: ${({ theme }) => theme.screens.lg}) {
@@ -217,7 +218,7 @@ export const NavLinks = styled.a`
     border-bottom: 1.7px solid ${orange};
   }
 `;
-export const BtnLink = styled.a`
+export const BtnLink = styled(motion.a)`
   color: ${white1};
   padding: 1.2rem 1.5rem;
   border-radius: 0.5rem;

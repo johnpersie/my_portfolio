@@ -3,7 +3,9 @@ import { ThemeProvider } from "styled-components";
 import Footer from "./component/Footer/Footer";
 import Navbar from "./component/Navbar";
 import HomePage from "./component/Pages/HomePage";
+import ScrollToTop from "./component/ScrollToTop/SrollToTop";
 import { GlobalStyles } from "./GlobalStyles";
+import { motion } from "framer-motion";
 
 const theme = {
   color: {
@@ -42,10 +44,13 @@ function App() {
   return (
     <Fragment>
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Navbar />
-        <HomePage />
-        <Footer />
+        <motion.div initial="hidden" animate="show">
+          <GlobalStyles />
+          <ScrollToTop />
+          <Navbar />
+          <HomePage />
+          <Footer />
+        </motion.div>
       </ThemeProvider>
     </Fragment>
   );

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, MainHeading } from "../../GlobalStyles";
 import { FaCheckCircle } from "react-icons/fa";
 import { VscVmRunning, VscGithubInverted } from "react-icons/vsc";
+import { motion } from "framer-motion";
 
 const black2 = ({ theme }) => theme.color.black2;
 const black1 = ({ theme }) => theme.color.black1;
@@ -18,6 +19,7 @@ export const ProjectWrapper = styled(Container)`
     width: 96%;
   }
 `;
+export const HeadingWrapper = styled(motion.div)``;
 export const Heading = styled(MainHeading)`
   position: relative;
   font-size: clamp(2.5rem, 5vw, 3rem);
@@ -63,7 +65,7 @@ export const Row = styled.div`
   }
 `;
 export const Content = styled.div``;
-export const Col1 = styled.div`
+export const Col1 = styled(motion.div)`
   width: 50%;
   ::before {
     content: "";
@@ -111,7 +113,7 @@ export const Col2 = styled.div`
     padding: 1rem;
   }
 `;
-export const TitleWrapper = styled.div`
+export const TitleWrapper = styled(motion.div)`
   text-align: end;
   margin-bottom: 2rem;
 
@@ -126,7 +128,7 @@ export const ProjectTitle = styled.h2`
   font-weight: 600;
 `;
 
-export const Description = styled.div`
+export const Description = styled(motion.div)`
   width: 100%;
   display: flex;
   justify-content: ${({ jc }) => jc || "flex-end"};
@@ -154,7 +156,7 @@ export const Parag = styled.p`
     text-align: start;
   }
 `;
-export const TextWrapper = styled.div`
+export const TextWrapper = styled(motion.div)`
   margin-top: 2rem;
   span {
     display: flex;

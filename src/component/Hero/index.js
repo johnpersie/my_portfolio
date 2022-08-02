@@ -10,18 +10,21 @@ import {
   HeroDescription,
   TypewriterText,
   Row,
-  // GetInTouchBtn,
-  // ViewProject,
   Arrow,
   Mouse,
   MouseDownWrapper,
 } from "./HeroStyles";
 
+import { heroAnimations } from "../Motion/animation";
+
 const Hero = () => {
   return (
     <HeroSection id="hero">
       <Container>
-        <HeroContent>
+        <HeroContent
+          variants={heroAnimations}
+          transition={{ delay: 0.6, type: "spring" }}
+        >
           <HeroSubHeading>
             👋 hello there, i am <span>john</span>
           </HeroSubHeading>
