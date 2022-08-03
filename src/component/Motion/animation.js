@@ -24,3 +24,7 @@ export const ScaleInAnimations = {
   hidden: { scale: 0, opacity: 0 },
   show: { scale: 1, opacity: 1 },
 };
+export const AboutAnimations = {
+  hidden: { scale: 0, y: 200, opacity: 0 },
+  show: { scale: 1, y: 1, opacity: 1 },
+};
