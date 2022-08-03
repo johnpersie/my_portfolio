@@ -23,17 +23,26 @@ import {
   HeadingWrapper,
 } from "./ProjectStyles";
 import { projectAnimations, slideInAnimations } from "../Motion/animation";
-import { useScroll } from "../Motion/useScroll";
+import { useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+
 const Project = () => {
-  const [ref, controls] = useScroll();
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    inView ? control.start("show") : control.start("hidden");
+  }, [control, inView]);
   return (
     <Section id="project" ref={ref}>
       <Container>
         <ProjectWrapper>
           <HeadingWrapper
+            initial="hidden"
             variants={projectAnimations}
             transition={{ delay: 0.3, type: "spring" }}
-            animate={controls}
+            animate={control}
           >
             <Heading>Projects</Heading>
             <SubHeading>Some Things I’ve Built</SubHeading>
@@ -43,7 +52,8 @@ const Project = () => {
               <Col1
                 variants={projectAnimations}
                 transition={{ delay: 0.5, type: "tween" }}
-                animate={controls}
+                animate={control}
+                initial="hidden"
               >
                 <Wrapper>
                   <a href={items.live}>
@@ -55,7 +65,8 @@ const Project = () => {
                 <TitleWrapper
                   variants={projectAnimations}
                   transition={{ delay: 0.4, duration: 0.5, type: "spring" }}
-                  animate={controls}
+                  animate={control}
+                  initial="hidden"
                 >
                   <SubTitle>{items.team}</SubTitle>
                   <ProjectTitle>{items.title}</ProjectTitle>
@@ -64,7 +75,8 @@ const Project = () => {
                   variants={slideInAnimations}
                   transition={{ delay: 0.6, duration: "1", type: "tween" }}
                   jc={items.id % 2 === 0 && "flex-start"}
-                  animate={controls}
+                  animate={control}
+                  initial="hidden"
                 >
                   <div>
                     <Parag ta={items.id % 2 === 0 && "start"}>
@@ -75,7 +87,8 @@ const Project = () => {
                 <TextWrapper
                   variants={slideInAnimations}
                   transition={{ delay: 1.2, duration: "1", type: "tween" }}
-                  animate={controls}
+                  animate={control}
+                  initial="hidden"
                   jc={items.id % 2 === 0 && "flex-start"}
                 >
                   <span>

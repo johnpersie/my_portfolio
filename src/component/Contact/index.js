@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container } from "../../GlobalStyles";
 import {
   ContactSection,
@@ -10,9 +10,17 @@ import emailjs from "@emailjs/browser";
 import Alert from "../alert";
 import CardLink from "./CardLink";
 import { ScaleInAnimations } from "../Motion/animation";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 
 const Contact = () => {
   const [alert, setAlert] = useState(null);
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    inView ? control.start("show") : control.start("hidden");
+  }, [control, inView]);
 
   const showAlert = (message, type) => {
     setAlert({
@@ -52,7 +60,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <ContactSection id="contact">
+    <ContactSection id="contact" ref={ref}>
       <Container>
         <ContainerWrapper>
           <TextWrapper>
@@ -63,6 +71,8 @@ const Contact = () => {
           </TextWrapper>
           <FormContainer
             variants={ScaleInAnimations}
+            initial="hidden"
+            animate={control}
             transition={{ delay: 0.6, duration: "1", type: "spring" }}
           >
             <form ref={form} onSubmit={sendEmail}>

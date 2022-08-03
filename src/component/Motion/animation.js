@@ -21,6 +21,6 @@ export const slideInAnimations = {
   show: { x: 0, opacity: 1 },
 };
 export const ScaleInAnimations = {
-  hidden: { scale: 2, opacity: 0 },
+  hidden: { scale: 0, opacity: 0 },
   show: { scale: 1, opacity: 1 },
 };
