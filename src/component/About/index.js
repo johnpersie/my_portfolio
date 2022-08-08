@@ -13,13 +13,14 @@ import {
 } from "./AboutStyles";
 import { AboutAnimations, projectAnimations } from "../Motion/animation";
 import { useInView } from "react-intersection-observer";
+import resume from "../../image/JohnAhachi.pdf";
 
 const About = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    inView ? control.start("show") : control.start("hidden");
+    inView || control.start("show");
   }, [control, inView]);
   return (
     <AboutSection id="about" ref={ref}>
@@ -59,7 +60,7 @@ const About = () => {
                 interactive, high performing and pixel-perfect experience.
               </p>
               <AboutLink>
-                <a href="../../image/John Ahachi .pdf" download>
+                <a href={resume} download target="_blank" rel="noreferrer">
                   Resume
                 </a>
               </AboutLink>

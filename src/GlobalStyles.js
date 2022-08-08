@@ -57,7 +57,7 @@ export const paragraph = styled.p`
 
 export const TextWrapper = styled.span`
   letter-spacing: ${({ spacing }) => spacing || "1.8"};
-  text-align: ${({ align }) => align || "center"};
+  text-align: ${({ align }) => align || ""};
 `;
 export const Row = styled.div`
   display: ${({ display }) => display || "flex"};

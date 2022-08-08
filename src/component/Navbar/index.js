@@ -13,6 +13,7 @@ import {
 import logo from "../../image/logo1.png";
 import navData from "../Data/NavData";
 import { navAnimations } from "../Motion/animation";
+import resume from "../../image/JohnAhachi.pdf";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
         <NavToggle isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
           <span>&nbsp;</span>
         </NavToggle>
-        <NavLogo href="#home">
+        <NavLogo href="hero">
           <Img src={logo} alt="JohnAhachi" />
           John&nbsp;<span>Ahachi</span>
         </NavLogo>
@@ -51,8 +52,9 @@ const Navbar = () => {
           <BtnLink
             variants={navAnimations}
             transition={{ delay: "0.8", type: "spring" }}
-            href="../../image/John Ahachi .pdf"
-            download={"../../image/John Ahachi .pdf"}
+            href={resume}
+            target="_blank"
+            rel="noreferrer"
           >
             Resume
           </BtnLink>

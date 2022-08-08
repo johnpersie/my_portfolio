@@ -32,7 +32,7 @@ const Project = () => {
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    inView ? control.start("show") : control.start("hidden");
+    inView || control.start("show");
   }, [control, inView]);
   return (
     <Section id="project" ref={ref}>

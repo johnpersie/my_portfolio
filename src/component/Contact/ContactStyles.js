@@ -7,7 +7,6 @@ const black1 = ({ theme }) => theme.color.black1;
 const blackOpacity1 = ({ theme }) => theme.color.blackOpacity1;
 const darkgray = ({ theme }) => theme.color.darkgray;
 const orange = ({ theme }) => theme.color.orange;
-const gray = ({ theme }) => theme.color.gray;
 const white = ({ theme }) => theme.color.white;
 
 export const ContactSection = styled(Section)`
@@ -39,7 +38,7 @@ export const TextWrapper = styled.div`
     text-transform: uppercase;
     span {
       font-weight: 800;
-      color: red;
+      color: ${darkgray};
     }
   }
 `;
@@ -54,7 +53,7 @@ export const Heading = styled(MainHeading)`
 `;
 export const FormContainer = styled(motion.div)`
   margin: auto;
-  width: 50%;
+  width: 60%;
   align-content: center;
   background: ${black2};
   padding: 3rem 3rem;
@@ -174,21 +173,54 @@ export const FormContainer = styled(motion.div)`
     }
   }
 `;
+export const SocialWrapper = styled.div`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 4rem;
+  bottom: 0;
 
-export const TextBox = styled.textarea`
-  width: 100%;
-  color: ${white};
-  resize: none;
-  border-radius: 5px;
-  border: 2px solid ${gray};
-  outline: none;
-  padding: 1rem;
-  background: rgb(6, 11, 35, 0.5);
+  ::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20rem;
+    margin: 0px auto;
+    background: ${darkgray};
+  }
+`;
+export const SocialLink = styled.a`
+  color: ${darkgray};
   margin-bottom: 2rem;
-  position: relative;
+  transition: transform 0.1s;
 
   :hover {
-    border-color: ${darkgray};
-    transition: 0.2s ease-in;
+    color: ${orange};
+    transform: scale(1.1);
+  }
+`;
+export const EmailWrapper = styled.div`
+  position: fixed;
+  right: 4rem;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  ::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 20rem;
+    margin: 0px auto;
+    background: ${darkgray};
+  }
+`;
+export const EmailLink = styled.a`
+  color: ${darkgray};
+  transition: transform 0.1s;
+  writing-mode: vertical-rl;
+
+  :hover {
+    transform: translateY(-0.5rem);
   }
 `;

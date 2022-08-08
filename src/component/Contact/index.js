@@ -3,7 +3,11 @@ import { Container } from "../../GlobalStyles";
 import {
   ContactSection,
   ContainerWrapper,
+  EmailLink,
+  EmailWrapper,
   FormContainer,
+  SocialLink,
+  SocialWrapper,
   TextWrapper,
 } from "./ContactStyles";
 import emailjs from "@emailjs/browser";
@@ -12,6 +16,7 @@ import CardLink from "./CardLink";
 import { ScaleInAnimations } from "../Motion/animation";
 import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
+import { contact } from "../Data/Contact";
 
 const Contact = () => {
   const [alert, setAlert] = useState(null);
@@ -19,7 +24,7 @@ const Contact = () => {
   const [ref, inView] = useInView();
 
   useEffect(() => {
-    inView ? control.start("show") : control.start("hidden");
+    inView || control.start("show");
   }, [control, inView]);
 
   const showAlert = (message, type) => {
@@ -115,6 +120,21 @@ const Contact = () => {
             </form>
             <Alert alert={alert} />
           </FormContainer>
+
+          <>
+            <SocialWrapper>
+              {contact.map((item) => (
+                <SocialLink href={item.link} key={item.id}>
+                  {item.icon}
+                </SocialLink>
+              ))}
+            </SocialWrapper>
+            <EmailWrapper>
+              <EmailLink href="mailto:ahachi.john@outlook.com">
+                ahachi.john@outlook.com
+              </EmailLink>
+            </EmailWrapper>
+          </>
         </ContainerWrapper>
         <CardLink />
       </Container>
