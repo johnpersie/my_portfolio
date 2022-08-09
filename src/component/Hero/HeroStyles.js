@@ -4,7 +4,7 @@ import { VscArrowSmallDown } from "react-icons/vsc";
 import { motion } from "framer-motion";
 
 import { Heading, MainHeading, paragraph, Section } from "../../GlobalStyles";
-import bg from "../../image/bg.jpg";
+import bg from "../../Assets/bg.jpg";
 
 const white1 = ({ theme }) => theme.color.white1;
 const orange = ({ theme }) => theme.color.orange;

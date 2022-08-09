@@ -10,10 +10,10 @@ import {
   NavMenu,
   NavToggle,
 } from "./NavbarStyles";
-import logo from "../../image/logo1.png";
+import logo from "../../Assets/logo1.png";
 import navData from "../Data/NavData";
 import { navAnimations } from "../Motion/animation";
-import resume from "../../image/JohnAhachi.pdf";
+import resume from "../../Assets/JohnAhachi.pdf";
 
 const Navbar = () => {
   const [navColor, setNavColor] = useState(false);

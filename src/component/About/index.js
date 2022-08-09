@@ -13,7 +13,7 @@ import {
 } from "./AboutStyles";
 import { AboutAnimations, projectAnimations } from "../Motion/animation";
 import { useInView } from "react-intersection-observer";
-import resume from "../../image/JohnAhachi.pdf";
+import resume from "../../Assets/JohnAhachi.pdf";
 
 const About = () => {
   const control = useAnimation();
@@ -40,7 +40,7 @@ const About = () => {
           initial="hidden"
         >
           <ImgWrapper>
-            <Img src={require("../../image/john.jpg")} alt="skills" />
+            <Img src={require("../../Assets/john.jpg")} alt="skills" />
           </ImgWrapper>
           <AboutContent>
             <ContentWrapper>

@@ -55,7 +55,7 @@ export const ImgWrapper = styled.div`
   display: flex;
   justify-items: center;
   align-items: center;
-  flex: 0 1 250px;
+  flex: 0 1 25rem;
   @media screen and (max-width: 960px) {
     width: 45%;
   }
@@ -69,6 +69,15 @@ export const Img = styled.img`
   width: 100%;
   filter: grayscale(1);
 
+  @media screen and (max-width: 960px) {
+    filter: brightness(100%) contrast(110%) saturate(1);
+    ::after {
+      display: none;
+    }
+    :hover {
+      display: none;
+    }
+  }
   ::after {
     content: "";
     display: block;

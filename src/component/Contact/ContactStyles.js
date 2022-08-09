@@ -10,7 +10,7 @@ const orange = ({ theme }) => theme.color.orange;
 const white = ({ theme }) => theme.color.white;
 
 export const ContactSection = styled(Section)`
-  background-image: url(${require("../../image/frontend.jpg")});
+  background-image: url(${require("../../Assets/frontend.jpg")});
   height: 100%;
   width: 100vw;
   background-position: center;
@@ -181,6 +181,10 @@ export const SocialWrapper = styled.div`
   left: 4rem;
   bottom: 0;
 
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+
   ::after {
     content: "";
     display: block;
@@ -206,11 +210,16 @@ export const EmailWrapper = styled.div`
   display: flex;
   flex-direction: column;
   bottom: 0;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+
   ::after {
     content: "";
     display: block;
     width: 1px;
-    height: 20rem;
+    height: 15rem;
     margin: 0px auto;
     background: ${darkgray};
   }
@@ -219,8 +228,10 @@ export const EmailLink = styled.a`
   color: ${darkgray};
   transition: transform 0.1s;
   writing-mode: vertical-rl;
+  margin-bottom: 2rem;
 
   :hover {
     transform: translateY(-0.5rem);
+    color: ${white};
   }
 `;

@@ -1,4 +1,4 @@
-import nailBoutique from "../../image/project2.jpg";
+import nailBoutique from "../../Assets/project2.jpg";
 export const data = [
   {
     id: 1,

@@ -1,19 +1,19 @@
-import HTML from "../../image/html5-svgrepo-com.svg";
-import CSS from "../../image/css3-svgrepo-com.svg";
-import JavaScript from "../../image/js-official-svgrepo-com.svg";
-import React from "../../image/react-svgrepo-com.svg";
-import SASS from "../../image/sass-svgrepo-com.svg";
-import Styled from "../../image/styled-svgrepo-com.svg";
-import RESTful from "../../image/RESTful-APIs.svg";
-import Bootstrap from "../../image/bootstrap-svgrepo-com.svg";
-import Tailwind from "../../image/tailwindcss-icon-svgrepo-com.svg";
-import Git from "../../image/git-icon-svgrepo-com.svg";
-import Github from "../../image/github-svgrepo-com.svg";
-import Gitlab from "../../image/gitlab-svgrepo-com.svg";
-import npm from "../../image/npm-icon-svgrepo-com.svg";
-import Figma from "../../image/figma-svgrepo-com.svg";
-import Netlify from "../../image/netlify-svgrepo-com.svg";
-import MUI from "../../image/material-ui-svgrepo-com.svg";
+import HTML from "../../Assets/html5-svgrepo-com.svg";
+import CSS from "../../Assets/css3-svgrepo-com.svg";
+import JavaScript from "../../Assets/js-official-svgrepo-com.svg";
+import React from "../../Assets/react-svgrepo-com.svg";
+import SASS from "../../Assets/sass-svgrepo-com.svg";
+import Styled from "../../Assets/styled-svgrepo-com.svg";
+import RESTful from "../../Assets/RESTful-APIs.svg";
+import Bootstrap from "../../Assets/bootstrap-svgrepo-com.svg";
+import Tailwind from "../../Assets/tailwindcss-icon-svgrepo-com.svg";
+import Git from "../../Assets/git-icon-svgrepo-com.svg";
+import Github from "../../Assets/github-svgrepo-com.svg";
+import Gitlab from "../../Assets/gitlab-svgrepo-com.svg";
+import npm from "../../Assets/npm-icon-svgrepo-com.svg";
+import Figma from "../../Assets/figma-svgrepo-com.svg";
+import Netlify from "../../Assets/netlify-svgrepo-com.svg";
+import MUI from "../../Assets/material-ui-svgrepo-com.svg";
 
 export const technologies = [
   {
